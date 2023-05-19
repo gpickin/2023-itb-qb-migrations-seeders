@@ -1,8 +1,9 @@
 {
-    "name":"qbexamples",
-    "web":{
-        "rewrites":{
-            "enable":"true"
-        }
-    }
+	"name": "qbexamples",
+	"web": {
+		"port": "8123",
+		"rewrites": {
+			"enable": "true"
+		}
+	}
 }

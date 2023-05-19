@@ -3,6 +3,44 @@
 		<a href="/qb/index.cfm">Home</a> :
 		Filter Users</h3>
 
+		<hr>
+
+	<h5>Filter Users Form</h5>
+
+	<cfform method="post" action="/qb/filterUsers">
+		<div class="row">
+			<div class="col-3 py-1"><label for="firstName">First Name:</label></div>
+			<div class="col-9 py-1">
+				<cfinput type="text" name="firstName" id="firstName" value="#rc.firstName#" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-3 py-1"><label for="lastName">Last Name:</label></div>
+			<div class="col-9 py-1">
+				<cfinput type="text" name="lastName" id="lastName" value="#rc.lastName#" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-3 py-1"><label for="email">Email:</label></div>
+			<div class="col-9 py-1">
+				<cfinput type="text" name="email" id="email" value="#rc.email#" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-3 py-1"><label for="Active">Is Active?:</label></div>
+			<div class="col-9 py-1">
+				<select name="isActive">
+					<option value="all" <cfif rc.isActive == "all">selected</cfif>>All Users - Active and Inactive</option>
+					<option value="1" <cfif rc.isActive == "1">selected</cfif>>Only Active Users</option>
+					<option value="0" <cfif rc.isActive == "0">selected</cfif>>Only Inactive Users</option>
+				</select>
+			</div>
+		</div>
+		<input type="submit" value="Filter Users" class="btn btn-primary" />
+	</cfform>
+
+	<hr>
+
 	<h5>queryExecute</h5>
 <pre>
 sql = "SELECT *";
@@ -81,6 +119,9 @@ results = queryExecute( sql, sqlParams, { returntype="array" } );
 &lt;/cffunction&gt;
 
 	</pre>
+
+
+	<hr>
 
 	<div class="row">
 	<div class="col-6">
