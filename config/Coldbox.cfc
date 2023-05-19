@@ -140,20 +140,20 @@ component {
 		 */
 		moduleSettings = {
 			// Debugger Settings
-			cbDebugger = {
+			cbDebugger : {
 				// Master switch to enable/disable request tracking into storage facilities.
-				enabled : true,
+				enabled          : true,
 				// Turn the debugger UI on/off by default. You can always enable it via the URL using your debug password
 				// Please note that this is not the same as the master switch above
 				// The debug mode can be false and the debugger will still collect request tracking
-				debugMode : true,
+				debugMode        : true,
 				// The URL password to use to activate it on demand
-				debugPassword  : "cb:null",
+				debugPassword    : "cb:null",
 				// This flag enables/disables the end of request debugger panel docked to the bottom of the page.
 				// If you disable it, then the only way to visualize the debugger is via the `/cbdebugger` endpoint
 				requestPanelDock : true,
 				// Request Tracker Options
-				requestTracker : {
+				requestTracker   : {
 					// Track all cbdebugger events, by default this is off, turn on, when actually profiling yourself :) How Meta!
 					trackDebuggerEvents          : false,
 					// Store the request profilers in heap memory or in cachebox, default is memory. Options are: memory, cachebox
@@ -202,7 +202,7 @@ component {
 					// How many rows to dump for object collections
 					maxQueryRows : 50,
 					// Max number to use when dumping objects via the top argument
-					maxDumpTop: 5
+					maxDumpTop   : 5
 				},
 				// CacheBox Reporting
 				cachebox : { enabled : false, expanded : false },
@@ -230,10 +230,7 @@ component {
 					logParams : true
 				},
 				// Async Manager Reporting
-				async : {
-					enabled : false,
-					expanded : false
-				}
+				async : { enabled : false, expanded : false }
 			}
 		};
 

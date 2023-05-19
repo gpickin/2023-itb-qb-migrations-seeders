@@ -35,12 +35,11 @@ component extends="coldbox.system.ioc.config.Binder" {
 		// Map Bindings below
 	}
 
-	function afterAspectsLoad() {
-        map( "mssqlqb" )
-            .to( "qb.models.Query.QueryBuilder" )
-            .initArg( name = "grammar", ref = "SqlServerGrammar@qb" )
-            .initArg( name = "defaultOptions", value = {
-                datasource: "qbExamples_mssql"
-            } );
-    }
+	function afterAspectsLoad(){
+		map( "mssqlqb" )
+			.to( "qb.models.Query.QueryBuilder" )
+			.initArg( name = "grammar", ref = "SqlServerGrammar@qb" )
+			.initArg( name = "defaultOptions", value = { datasource : "qbExamples_mssql" } );
+	}
+
 }
