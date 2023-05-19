@@ -1,0 +1,38 @@
+{
+	"default": {
+		"manager": "cfmigrations.models.QBMigrationManager",
+		"migrationsDirectory": "resources/database/migrations/",
+		"seedsDirectory": "resources/database/seeds/",
+		"properties": {
+			"defaultGrammar": "AutoDiscover@qb",
+			"schema": "${DB_SCHEMA}",
+			"migrationsTable": "cfmigrations",
+			"connectionInfo": {
+				"password": "${DB_PASSWORD}",
+				"connectionString": "${DB_CONNECTIONSTRING}",
+				"class": "${DB_CLASS}",
+				"username": "${DB_USER}",
+				"bundleName": "${DB_BUNDLENAME}",
+				"bundleVersion": "${DB_BUNDLEVERSION}"
+			}
+		}
+	},
+	"mssql": {
+		"manager": "cfmigrations.models.QBMigrationManager",
+		"migrationsDirectory": "resources/database/migrations/",
+		"seedsDirectory": "resources/database/seeds/",
+		"properties": {
+			"defaultGrammar": "SqlServerGrammar@qb",
+			"schema": "${MSSQL_DB_SCHEMA}",
+			"migrationsTable": "cfmigrations",
+			"connectionInfo": {
+				"password": "${MSSQL_DB_PASSWORD}",
+				"connectionString": "${MSSQL_DB_CONNECTIONSTRING}",
+				"class": "${MSSQL_DB_CLASS}",
+				"username": "${MSSQL_DB_USER}",
+				"bundleName": "${MSSQL_DB_BUNDLENAME}",
+				"bundleVersion": "${MSSQL_DB_BUNDLEVERSION}"
+			}
+		}
+	}
+}

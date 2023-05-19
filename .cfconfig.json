@@ -1,0 +1,53 @@
+{
+	"cacheDefaultObject": "coldbox",
+	"debuggingEnabled": true,
+	"debuggingReportExecutionTimes": false,
+	"disableInternalCFJavaComponents": false,
+	"requestTimeoutEnabled": true,
+	"requestTimeout": "0,0,5,0",
+	"robustExceptionEnabled": true,
+	"caches": {
+		"coldbox": {
+			"storage": "true",
+			"type": "RAM",
+			"custom": {
+				"timeToIdleSeconds": "1800",
+				"timeToLiveSeconds": "3600"
+			},
+			"class": "lucee.runtime.cache.ram.RamCache",
+			"readOnly": "false"
+		}
+	},
+	"datasources": {
+		"${DB_DATABASE}": {
+			"host": "${DB_HOST}",
+			"dbdriver": "${DB_DRIVER}",
+			"database": "${DB_DATABASE}",
+			"dsn": "jdbc:mysql://{host}:{port}/{database}",
+			"custom": "useSSL=false&useUnicode=true&characterEncoding=UTF-8&useLegacyDatetimeCode=true&autoReconnect=true&enabledTLSProtocols=TLSv1.2",
+			"port": "${DB_PORT}",
+			"class": "${DB_CLASS}",
+			"bundleName": "${DB_BUNDLENAME}",
+			"bundleVersion": "${DB_BUNDLEVERSION}",
+			"username": "${DB_USER}",
+			"password": "${DB_PASSWORD}",
+			"connectionLimit": "100",
+			"connectionTimeout": "1"
+		},
+		"${MSSQL_DB_DATASOURCE_NAME}": {
+			"host": "${MSSQL_DB_HOST}",
+			"dbdriver": "MSSQL",
+			"database": "${MSSQL_DB_DATABASE}",
+			"dsn": "jdbc:sqlserver://{host}:{port}",
+			"custom": "DATABASENAME=${MSSQL_DB_DATABASE}&sendStringParametersAsUnicode=true&SelectMethod=direct",
+			"port": "${MSSQL_DB_PORT}",
+			"class": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+			"username": "${MSSQL_DB_USER}",
+			"password": "${MSSQL_DB_PASSWORD}",
+			"connectionLimit": "100",
+			"connectionTimeout": "20",
+			"validate": "true"
+		}
+	},
+	"whitespaceManagement": "white-space-pref"
+}

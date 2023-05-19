@@ -1,0 +1,8 @@
+{
+    "name":"qbexamples",
+    "web":{
+        "rewrites":{
+            "enable":"true"
+        }
+    }
+}
